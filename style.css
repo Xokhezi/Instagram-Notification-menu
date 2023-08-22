@@ -1,0 +1,126 @@
+body {
+  margin: 0;
+  height: 100vh;
+  background: pink;
+  font-family: "Roboto", sans-serif;
+  overflow: hidden;
+}
+nav {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #f9f8f8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+.btn-notif {
+  position: fixed;
+  top: 20px;
+  right: 10px;
+  height: 30px;
+  width: 30px;
+  border-radius: 5px;
+  border: none;
+  background: #a1a0a0;
+  color: white;
+  cursor: pointer;
+}
+.btn-notif:hover {
+  background: pink;
+}
+.notification-box {
+  background: white;
+  position: absolute;
+  top: 90px;
+  right: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  width: 300px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 0px 0 10px 10px;
+}
+.header {
+  border-bottom: #d4d3d3 1px solid;
+}
+.notification {
+  position: relative;
+  width: 90%;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-bottom: #f1f1f1 1px solid;
+}
+.notification:hover {
+  background: #f1f1f1;
+}
+.name {
+  margin-right: 5px;
+}
+.thumb-section {
+  position: relative;
+}
+.thumb {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #fff;
+  margin-right: 10px;
+}
+.status {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: #00fa2a;
+  margin-right: 10px;
+}
+.time {
+  position: absolute;
+  bottom: 5px;
+  right: 0px;
+  font-size: 0.7rem;
+  color: #a1a0a0;
+}
+.show {
+  display: flex;
+}
+.hide {
+  display: none;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(70px);
+  }
+}
+.notification-box--fade-in {
+  animation: fadeIn 0.3s ease-in-out;
+}
+.notification-box--fade-out {
+  animation: fadeOut 0.3s ease-in-out;
+}
